@@ -1,0 +1,134 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--------------animated css library------------------->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!----------font main head------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <!--------------second font------------------------>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Gaegu&family=Loved+by+the+King&display=swap"
+      rel="stylesheet"
+    />
+    <!-------------------third font---------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Playwrite+NG+Modern:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <!----------------links stylesheet----------------->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.min.css"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>To-Do-List</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="inner-item">
+          <div
+            class="item d-flex justify-content-around align-items-center mt-5 animate__animated animate__fadeInDownBig"
+          >
+            <h1>To-Do-List</h1>
+            <div class="inpandbutt d-flex w-25 p-3">
+              <input
+                oninput="vaildInputs(this)"
+                type="text"
+                name="listData"
+                id="listData"
+                placeholder="Inter The Work"
+                class="me-2 listData"
+              />
+
+              <select id="statusInput" class="me-2 listData" name="statusInput">
+                <option value="pending" id="pending">Pending</option>
+                <option value="inProgress" id="in-progress">In Progress</option>
+                <option value="done" id="done">Done</option>
+              </select>
+
+              <button class="w-25 rounded-1 px-3 btnModify" id="add">
+                Add
+              </button>
+            </div>
+          </div>
+          <div class="parent-list" id="grandList"></div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="contMain"
+      class="container d-none animate__animated animate__fadeInDown mainLnyar position-absolute top-0 start-0 end-0 bottom-0 bg-white position-relative"
+    >
+      <span
+        class="colorCircle1 bg-danger rounded-circle position-absolute"
+      ></span>
+      <span
+        class="colorCircle2 bg-warning rounded-circle position-absolute"
+      ></span>
+      <span
+        class="colorCircle3 bg-success rounded-circle position-absolute"
+      ></span>
+      <i
+        class="fa-solid fa-xmark d-flex justify-content-end align-items-center close fs-5"
+        id="closeAlrt"
+      ></i>
+
+      <div class="row">
+        <div class="lnyar">
+          <div class="lnyarContent">
+            <h5 class="text-center mt-5 alertInp text-capitalize">
+              you should insert a task in the input
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table
+      class="bg-white w-100 text-center mt-5 display"
+      id="example"
+      style="width: 100%"
+    >
+      <thead>
+        <tr
+          class="border border-start-0 border-end-0 border-top-0 d-flex justify-content-around align-items-center"
+        >
+          <th class="p-2 text-center">Pending</th>
+          <th class="p-2 text-center">In Progress</th>
+          <th class="p-2 text-center">Done</th>
+        </tr>
+      </thead>
+      <tbody id="tbodyData1"></tbody>
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"
+    ></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="Ts/index.js"></script>
+  </body>
+</html>
