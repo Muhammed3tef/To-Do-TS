@@ -24,7 +24,7 @@ if (localStorage.getItem("list")) {
   arr = JSON.parse(localStorage.getItem("list") || "[]");
 }
 
-add?.addEventListener("click", () => {
+add?.addEventListener("click", ():void =>  {
   let nameWork = (listData as HTMLInputElement).value;
   let statusValue = (statusInput as HTMLInputElement).value;
   arr.push({ nameWork, statusInput: statusValue });
@@ -43,12 +43,12 @@ function getData() {
         <td>${arr[i].nameWork}</td>
       </tr>`;
   }
-  document.getElementById("tbodyData1")!.innerHTML = cartona;
+  tbodyData1!.innerHTML = cartona;
 }
 getData();
 
 //valid
-function vaildInputs(element : HTMLInputElement) {
+function vaildInputs(element : HTMLInputElement):void {
   var regex: { [key: string]: RegExp } = {
     listData: /^[a-zA-z]{3,200}$/i,
   };

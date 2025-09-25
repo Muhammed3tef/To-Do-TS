@@ -35,7 +35,7 @@ function getData() {
         <td>${arr[i].nameWork}</td>
       </tr>`;
     }
-    document.getElementById("tbodyData1").innerHTML = cartona;
+    tbodyData1.innerHTML = cartona;
 }
 getData();
 //valid
