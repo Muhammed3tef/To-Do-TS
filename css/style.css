@@ -82,7 +82,12 @@ i{
     font-family: var(--lnyar-font);
     
 }
-
+.trash-icon{
+    transition: .3s;
+}
+.trash-icon:hover{
+    color: red;
+}
 @media (max-width: 577px){
     .item{
         display: flex;
